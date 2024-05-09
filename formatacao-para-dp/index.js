@@ -8,7 +8,7 @@ botao.addEventListener("click", () => {
     const textoSemAcentos = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
     // Remove traços e pontos
-    const textoSemTracosEPontos = textoSemAcentos.replace(/[-.]/g, "");
+    const textoSemTracosEPontos = textoSemAcentos.replace(/[-./]/g, "");
 
     // Converte para maiúsculas
     const textoMaiusculo = textoSemTracosEPontos.toUpperCase();
